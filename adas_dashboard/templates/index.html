@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101719">
+  <title>STRADA · ADAS dashboard</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script defer src="{{ url_for('static', filename='app.js') }}"></script>
+</head>
+<body class="stale stationary">
+<main class="dashboard">
+  <section class="drive-panel" aria-label="Live vehicle telemetry">
+    <header class="brand-row"><a class="brand" href="/" aria-label="Strada dashboard"><span class="brand-symbol">≋</span> STRADA<span class="brand-sub">ROAD INTELLIGENCE</span></a><span class="prototype">LOCAL / ADAS</span></header>
+    <div class="session-row"><span id="connection" class="connection offline"><i></i><span>Waiting for API…</span></span><span id="mode" class="mode">DATA SOURCE: WAITING</span></div>
+    <div class="speed-block"><div class="eyebrow">VEHICLE SPEED</div><div class="speed-line"><span id="speed">0</span><span class="speed-unit">km/h</span></div><div class="speed-caption"><span class="tiny-dot"></span><span id="drive-state">Awaiting telemetry</span></div></div>
+    <div class="road-scene" id="road-scene">
+      <div class="horizon"></div><div class="scene-grid"></div>
+      <div class="lane-perspective"><div class="road-surface"><div class="lane-dash left"></div><div class="lane-dash right"></div><div class="drive-path"></div></div></div>
+      <div class="distance-ticks"><span>100 m</span><span>50 m</span><span>0 m</span></div>
+      <div class="car-shadow"></div>
+      <svg class="vehicle" viewBox="0 0 84 154" aria-label="Top-down vehicle" role="img"><defs><linearGradient id="body" x1="0" x2="1"><stop stop-color="#7d919a"/><stop offset=".28" stop-color="#d8e4e6"/><stop offset=".7" stop-color="#becfd3"/><stop offset="1" stop-color="#70848a"/></linearGradient></defs><rect x="5" y="30" width="10" height="28" rx="4" fill="#080d10"/><rect x="69" y="30" width="10" height="28" rx="4" fill="#080d10"/><rect x="5" y="104" width="10" height="28" rx="4" fill="#080d10"/><rect x="69" y="104" width="10" height="28" rx="4" fill="#080d10"/><path d="M24 5 Q42 0 60 5 Q73 11 73 34 L73 128 Q73 147 60 150 L24 150 Q11 147 11 128 L11 34 Q11 11 24 5Z" fill="url(#body)" stroke="#e2eded" stroke-width="1.5"/><path d="M22 42 Q42 31 62 42 L66 66 Q42 59 18 66Z" fill="#172c34"/><path d="M20 76 L64 76 L62 115 Q42 125 22 115Z" fill="#263e46"/><path d="M25 128 Q42 134 59 128 L61 139 L23 139Z" fill="#14282e"/><path d="M16 19 L28 15 M56 15 L68 19" stroke="#eeffff" stroke-width="5"/><path d="M17 139 L17 145 M67 139 L67 145" stroke="#f0645b" stroke-width="4"/><path d="M17 74 L17 117 M67 74 L67 117" stroke="#6b8189" stroke-width="2"/></svg>
+      <div id="warning" class="warning" role="status" aria-live="polite" hidden><span class="warning-icon">!</span><div><strong id="warning-title">POTHOLE AHEAD</strong><span id="warning-detail">Reduce speed · road hazard nearby</span></div><b id="warning-distance"></b></div>
+      <div class="scene-label"><span class="scan-icon">⌁</span> ROAD SURFACE MONITORING <span class="scanning">●</span></div>
+    </div>
+    <div class="telemetry">
+      <div class="condition-row"><div><span class="eyebrow">ROAD CONDITION</span><div id="condition" class="condition smooth"><i></i> SMOOTH</div></div><div class="confidence"><span class="eyebrow">POTHOLE CONFIDENCE</span><div><strong id="confidence">0</strong><span>%</span></div><div class="confidence-track"><i id="confidence-bar"></i></div></div></div>
+      <div class="sensor-grid"><div><span class="eyebrow">ACCEL Z</span><strong><span id="az">0.00</span><small>g</small></strong><span class="sensor-caption">Vertical acceleration</span></div><div><span class="eyebrow">VIBRATION</span><strong><span id="vibration">0.00</span><small>g</small></strong><span class="sensor-caption">Surface impact</span></div><div><span class="eyebrow">GPS SIGNAL</span><strong id="gps-fix" class="gps-label">NO FIX</strong><span class="sensor-caption"><span id="satellites">0</span> satellites</span></div></div>
+    </div>
+    <footer class="drive-footer"><span><i></i> <span id="system-label">SYSTEM INITIALIZING</span></span><time id="clock">--:--:--</time></footer>
+  </section>
+  <section class="map-panel" aria-label="Live road map">
+    <div id="map"></div><div class="map-shade"></div>
+    <header class="map-header"><div><div class="eyebrow">LIVE ENVIRONMENT</div><h1>Your road, ahead.</h1></div><span class="map-live"><i></i> LIVE MAP</span></header>
+    <div id="map-error" class="map-error" role="status" hidden>Map unavailable. Internet is required for Leaflet and OpenStreetMap tiles.</div>
+    <div class="map-summary"><div class="summary-icon">⌖</div><div><span class="eyebrow">MAPPED POTHOLES</span><strong id="pothole-count">0</strong></div><span class="saved-label">LOCAL<br>REPORTS</span></div>
+    <details class="repair-history"><summary>REPAIRED HISTORY <span id="repaired-count">0</span></summary><div id="repaired-list">No repaired potholes yet.</div></details>
+    <div class="gps-quality-panel"><span id="gps-quality">GPS QUALITY: POOR</span><strong id="gps-warning" role="status" hidden>GPS SIGNAL WEAK</strong></div>
+    <button id="recenter" class="recenter" type="button" title="Center map and follow vehicle"><span>⌖</span> Following vehicle</button>
+    <div class="map-bottom"><div class="legend"><span class="eyebrow">IMPACT LEVEL</span><span><i class="low"></i>Low</span><span><i class="medium"></i>Medium</span><span><i class="high"></i>High</span></div><div class="location-card"><div class="location-icon">↗</div><div><span class="eyebrow">CURRENT LOCATION</span><div class="coordinates"><span id="latitude">—</span><span class="coordinate-divider">/</span><span id="longitude">—</span></div></div><span id="location-status" class="location-status">WAITING FOR GPS</span></div><div class="map-footnote">Proximity alerts within 100 m · distance only, all directions</div></div>
+  </section>
+</main>
+<div id="error-banner" class="error-banner" role="status" hidden></div>
+</body>
+</html>

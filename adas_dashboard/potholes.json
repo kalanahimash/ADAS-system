@@ -1,0 +1,20 @@
+[
+  {
+    "id": "b805b3674e0d44e4a83cdff416f9549a",
+    "lat": 6.4953485,
+    "lon": 79.98616774999999,
+    "confidence": 88.75,
+    "severity": "medium",
+    "report_count": 4,
+    "last_seen": "2026-09-18T09:52:52.547117+00:00"
+  },
+  {
+    "id": "f5ed5d0dbcd54b53a5c2a788b65002b1",
+    "lat": 6.495409,
+    "lon": 79.98602,
+    "confidence": 82.0,
+    "severity": "medium",
+    "report_count": 1,
+    "last_seen": "2026-09-18T09:54:00.346251+00:00"
+  }
+]

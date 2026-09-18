@@ -1,0 +1,29 @@
+[
+  {
+    "id": "3cd877b76ac241a89373f5c72111964d",
+    "lat": 6.495865675564273,
+    "lon": 79.98653834186669,
+    "confidence": 88.0,
+    "severity": "low",
+    "report_count": 114,
+    "last_seen": "2026-09-18T09:40:56.652615+00:00"
+  },
+  {
+    "id": "91fe1cd70fed4a8ab189cd313a67a053",
+    "lat": 6.495675652728,
+    "lon": 79.98556694432521,
+    "confidence": 92.0,
+    "severity": "medium",
+    "report_count": 113,
+    "last_seen": "2026-09-18T09:40:30.738223+00:00"
+  },
+  {
+    "id": "97d48a1b6d5d44a08fc8bf71517e172f",
+    "lat": 6.494883489654587,
+    "lon": 79.98620409789908,
+    "confidence": 96.0,
+    "severity": "high",
+    "report_count": 113,
+    "last_seen": "2026-09-18T09:40:43.943151+00:00"
+  }
+]
