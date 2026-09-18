@@ -60,5 +60,1175 @@
     "report_count": 4,
     "last_seen": "2026-09-18T14:00:57.245288+00:00",
     "status": "active"
+  },
+  {
+    "id": "5ae26415c0e34faf8c1ea9993e0368aa",
+    "lat": 6.521720124999984,
+    "lon": 79.9816802430557,
+    "confidence": 83.38194444444444,
+    "severity": "medium",
+    "report_count": 144,
+    "last_seen": "2026-09-18T16:58:27.369346+00:00",
+    "status": "active"
+  },
+  {
+    "id": "e04d8167b77246158bd5544a661e9c49",
+    "lat": 6.523988666666667,
+    "lon": 79.98184566666667,
+    "confidence": 88.0,
+    "severity": "low",
+    "report_count": 3,
+    "last_seen": "2026-09-18T17:09:08.222477+00:00",
+    "status": "active"
+  },
+  {
+    "id": "6c0c667c4e2046868de6bbd0af6dfb62",
+    "lat": 6.5241283333333335,
+    "lon": 79.98182783333334,
+    "confidence": 82.0,
+    "severity": "low",
+    "report_count": 6,
+    "last_seen": "2026-09-18T17:09:07.221829+00:00",
+    "status": "active"
+  },
+  {
+    "id": "1390b756a6354660860a1ed409c24d3d",
+    "lat": 6.52449042857143,
+    "lon": 79.98126378571429,
+    "confidence": 88.28571428571429,
+    "severity": "high",
+    "report_count": 14,
+    "last_seen": "2026-09-18T17:08:53.221541+00:00",
+    "status": "active"
+  },
+  {
+    "id": "da25d3598aa34e76960232fd45e8598a",
+    "lat": 6.5244786,
+    "lon": 79.981158,
+    "confidence": 88.4,
+    "severity": "medium",
+    "report_count": 5,
+    "last_seen": "2026-09-18T17:08:51.021618+00:00",
+    "status": "active"
+  },
+  {
+    "id": "26ac7b96bc20471d82183eaa53f12826",
+    "lat": 6.524277,
+    "lon": 79.980711,
+    "confidence": 85.0,
+    "severity": "low",
+    "report_count": 1,
+    "last_seen": "2026-09-18T16:59:13.169206+00:00",
+    "status": "active"
+  },
+  {
+    "id": "d257297b9b4a4889807a9d565a5d2015",
+    "lat": 6.524142999999994,
+    "lon": 79.98072800000007,
+    "confidence": 88.16129032258063,
+    "severity": "medium",
+    "report_count": 62,
+    "last_seen": "2026-09-18T17:00:16.170417+00:00",
+    "status": "active"
+  },
+  {
+    "id": "8d3b873e50d6447a803fb32436db44de",
+    "lat": 6.52380577777778,
+    "lon": 79.97972694444447,
+    "confidence": 84.72222222222223,
+    "severity": "low",
+    "report_count": 18,
+    "last_seen": "2026-09-18T17:02:37.615098+00:00",
+    "status": "active"
+  },
+  {
+    "id": "95edf04b0230469a9e5cb64a5778c7a6",
+    "lat": 6.5236698181818165,
+    "lon": 79.97975945454546,
+    "confidence": 80.54545454545455,
+    "severity": "low",
+    "report_count": 11,
+    "last_seen": "2026-09-18T17:07:46.820595+00:00",
+    "status": "active"
+  },
+  {
+    "id": "cf44f6d062544e6d8add25a73629165b",
+    "lat": 6.523544428571428,
+    "lon": 79.97985342857145,
+    "confidence": 81.0,
+    "severity": "low",
+    "report_count": 7,
+    "last_seen": "2026-09-18T17:02:45.615671+00:00",
+    "status": "active"
+  },
+  {
+    "id": "ff053703d97d4f28959a38b63e56fe27",
+    "lat": 6.523406307692307,
+    "lon": 79.97991569230769,
+    "confidence": 81.0,
+    "severity": "low",
+    "report_count": 13,
+    "last_seen": "2026-09-18T17:02:51.215045+00:00",
+    "status": "active"
+  },
+  {
+    "id": "f47ad92b815b43aa8eec0aca161abcba",
+    "lat": 6.523306153846155,
+    "lon": 79.97995861538462,
+    "confidence": 84.30769230769229,
+    "severity": "medium",
+    "report_count": 13,
+    "last_seen": "2026-09-18T17:02:54.815640+00:00",
+    "status": "active"
+  },
+  {
+    "id": "d5907a34175c46e0b5a47857bd828367",
+    "lat": 6.5232235,
+    "lon": 79.979985,
+    "confidence": 80.5,
+    "severity": "low",
+    "report_count": 2,
+    "last_seen": "2026-09-18T17:02:57.016105+00:00",
+    "status": "active"
+  },
+  {
+    "id": "42a286c17b7149959d67c281f36c95f6",
+    "lat": 6.523200999999999,
+    "lon": 79.98009688888888,
+    "confidence": 81.55555555555556,
+    "severity": "low",
+    "report_count": 9,
+    "last_seen": "2026-09-18T17:03:02.015244+00:00",
+    "status": "active"
+  },
+  {
+    "id": "e338f46ab266446a9f39871cabfef3d2",
+    "lat": 6.523090222222222,
+    "lon": 79.9800898888889,
+    "confidence": 84.0,
+    "severity": "low",
+    "report_count": 9,
+    "last_seen": "2026-09-18T17:03:04.015706+00:00",
+    "status": "active"
+  },
+  {
+    "id": "b7f5fcb4907b40a1a15c86a43df1b787",
+    "lat": 6.5229665,
+    "lon": 79.98007449999999,
+    "confidence": 84.0,
+    "severity": "low",
+    "report_count": 10,
+    "last_seen": "2026-09-18T17:03:06.215395+00:00",
+    "status": "active"
+  },
+  {
+    "id": "34d5d17a412c4cbfaaee9c2bade81d7d",
+    "lat": 6.522864333333334,
+    "lon": 79.98005233333333,
+    "confidence": 82.66666666666667,
+    "severity": "low",
+    "report_count": 3,
+    "last_seen": "2026-09-18T17:03:07.815734+00:00",
+    "status": "active"
+  },
+  {
+    "id": "a90fdfd649d24674a4b404321fa40842",
+    "lat": 6.522672,
+    "lon": 79.980003,
+    "confidence": 91.0,
+    "severity": "low",
+    "report_count": 1,
+    "last_seen": "2026-09-18T17:03:09.215487+00:00",
+    "status": "active"
+  },
+  {
+    "id": "b9436f1543764d77a6b22a83a7b834dd",
+    "lat": 6.522483,
+    "lon": 79.979938,
+    "confidence": 81.0,
+    "severity": "low",
+    "report_count": 1,
+    "last_seen": "2026-09-18T17:03:09.415998+00:00",
+    "status": "active"
+  },
+  {
+    "id": "6d0c7a084ab84801860ef36aca2747c4",
+    "lat": 6.5222809999999996,
+    "lon": 79.97987566666667,
+    "confidence": 80.0,
+    "severity": "low",
+    "report_count": 3,
+    "last_seen": "2026-09-18T17:07:17.420419+00:00",
+    "status": "active"
+  },
+  {
+    "id": "9c99c9eba01143bd9f64cf56996587fd",
+    "lat": 6.5222165,
+    "lon": 79.979847,
+    "confidence": 85.75,
+    "severity": "low",
+    "report_count": 4,
+    "last_seen": "2026-09-18T17:07:17.219935+00:00",
+    "status": "active"
+  },
+  {
+    "id": "51ce6de28bae4c5288d13d4037983556",
+    "lat": 6.522041,
+    "lon": 79.979793,
+    "confidence": 81.0,
+    "severity": "low",
+    "report_count": 2,
+    "last_seen": "2026-09-18T17:07:13.020270+00:00",
+    "status": "active"
+  },
+  {
+    "id": "b5550c805633495497e19aab265b3cbd",
+    "lat": 6.5216009999999995,
+    "lon": 79.97965175,
+    "confidence": 81.5,
+    "severity": "low",
+    "report_count": 4,
+    "last_seen": "2026-09-18T17:07:03.219397+00:00",
+    "status": "active"
+  },
+  {
+    "id": "1162330d39044dff85324d47b00bc2a4",
+    "lat": 6.5214739999999995,
+    "lon": 79.9796049,
+    "confidence": 81.8,
+    "severity": "low",
+    "report_count": 10,
+    "last_seen": "2026-09-18T17:07:01.219711+00:00",
+    "status": "active"
+  },
+  {
+    "id": "b2cddf0efb394358ae1789f7e10e599e",
+    "lat": 6.521362666666666,
+    "lon": 79.97955400000001,
+    "confidence": 85.66666666666667,
+    "severity": "low",
+    "report_count": 6,
+    "last_seen": "2026-09-18T17:06:57.619806+00:00",
+    "status": "active"
+  },
+  {
+    "id": "3d7b6ffe1edc44e48defbcece6f4419d",
+    "lat": 6.521266833333333,
+    "lon": 79.97951066666666,
+    "confidence": 80.16666666666667,
+    "severity": "low",
+    "report_count": 6,
+    "last_seen": "2026-09-18T17:06:55.019782+00:00",
+    "status": "active"
+  },
+  {
+    "id": "751bf13d580a49de9f233b0458e1aa40",
+    "lat": 6.521176833333333,
+    "lon": 79.97945749999998,
+    "confidence": 86.0,
+    "severity": "low",
+    "report_count": 6,
+    "last_seen": "2026-09-18T17:06:54.019257+00:00",
+    "status": "active"
+  },
+  {
+    "id": "da78e1718996440c82fe74ad4e1b0992",
+    "lat": 6.5210935,
+    "lon": 79.97939566666666,
+    "confidence": 88.33333333333333,
+    "severity": "medium",
+    "report_count": 12,
+    "last_seen": "2026-09-18T17:06:51.420053+00:00",
+    "status": "active"
+  },
+  {
+    "id": "c0fd888aa0f549a5ae8da907745d47e0",
+    "lat": 6.520992062500001,
+    "lon": 79.979315125,
+    "confidence": 89.25,
+    "severity": "medium",
+    "report_count": 16,
+    "last_seen": "2026-09-18T17:06:47.619463+00:00",
+    "status": "active"
+  },
+  {
+    "id": "fb476ff894f04ba88ff23f182c54c3ed",
+    "lat": 6.520897789473686,
+    "lon": 79.97923918421054,
+    "confidence": 91.65789473684211,
+    "severity": "medium",
+    "report_count": 38,
+    "last_seen": "2026-09-18T17:06:46.219160+00:00",
+    "status": "active"
+  },
+  {
+    "id": "3fdcb2e478e14741b9aa0156a83acd13",
+    "lat": 6.520799553191492,
+    "lon": 79.97916000000001,
+    "confidence": 87.40425531914896,
+    "severity": "high",
+    "report_count": 47,
+    "last_seen": "2026-09-18T17:06:42.219550+00:00",
+    "status": "active"
+  },
+  {
+    "id": "0b5832aca82242f99375e812aa4850b3",
+    "lat": 6.520699117647057,
+    "lon": 79.97910047058822,
+    "confidence": 87.29411764705883,
+    "severity": "medium",
+    "report_count": 17,
+    "last_seen": "2026-09-18T17:06:37.219807+00:00",
+    "status": "active"
+  },
+  {
+    "id": "0ea6f980dafa44b49126ee20e6bbc9e1",
+    "lat": 6.520609499999999,
+    "lon": 79.97902599999999,
+    "confidence": 80.66666666666667,
+    "severity": "low",
+    "report_count": 6,
+    "last_seen": "2026-09-18T17:03:51.216327+00:00",
+    "status": "active"
+  },
+  {
+    "id": "27c086e879784c9394c9d4b104182dcf",
+    "lat": 6.5204462,
+    "lon": 79.9789978,
+    "confidence": 81.4,
+    "severity": "low",
+    "report_count": 10,
+    "last_seen": "2026-09-18T17:06:31.018991+00:00",
+    "status": "active"
+  },
+  {
+    "id": "2fe7e152f7b14f44990f6a1f96ab1645",
+    "lat": 6.519912833333334,
+    "lon": 79.9790985,
+    "confidence": 85.5,
+    "severity": "low",
+    "report_count": 6,
+    "last_seen": "2026-09-18T17:06:19.018948+00:00",
+    "status": "active"
+  },
+  {
+    "id": "7377297f6b36444a871be6052e9397b3",
+    "lat": 6.5195186,
+    "lon": 79.9792472,
+    "confidence": 78.4,
+    "severity": "low",
+    "report_count": 5,
+    "last_seen": "2026-09-18T17:06:09.618342+00:00",
+    "status": "active"
+  },
+  {
+    "id": "4030c9249b0f4b22b653342428a5ab3f",
+    "lat": 6.51908975,
+    "lon": 79.97941075,
+    "confidence": 81.25,
+    "severity": "low",
+    "report_count": 4,
+    "last_seen": "2026-09-18T17:06:01.218199+00:00",
+    "status": "active"
+  },
+  {
+    "id": "c85e0407e6e549cc86db357ad5b7f893",
+    "lat": 6.518716666666667,
+    "lon": 79.97955474999999,
+    "confidence": 83.33333333333333,
+    "severity": "low",
+    "report_count": 12,
+    "last_seen": "2026-09-18T17:05:53.018997+00:00",
+    "status": "active"
+  },
+  {
+    "id": "10c1857bb6584eda8d748a7e4b4c4a2a",
+    "lat": 6.5184566,
+    "lon": 79.9796666,
+    "confidence": 80.4,
+    "severity": "low",
+    "report_count": 5,
+    "last_seen": "2026-09-18T17:05:46.018761+00:00",
+    "status": "active"
+  },
+  {
+    "id": "9f904dc470044a489be4148e8988b078",
+    "lat": 6.5182805,
+    "lon": 79.979753,
+    "confidence": 81.5,
+    "severity": "low",
+    "report_count": 4,
+    "last_seen": "2026-09-18T17:04:37.817371+00:00",
+    "status": "active"
+  },
+  {
+    "id": "c7e39eda77754dc8b392c2c687d671ec",
+    "lat": 6.518000000000001,
+    "lon": 79.9798825,
+    "confidence": 83.5,
+    "severity": "low",
+    "report_count": 2,
+    "last_seen": "2026-09-18T17:05:33.618017+00:00",
+    "status": "active"
+  },
+  {
+    "id": "fdcba2cfc1224170960011a1d9764f55",
+    "lat": 6.517646,
+    "lon": 79.98002199999999,
+    "confidence": 86.25,
+    "severity": "low",
+    "report_count": 4,
+    "last_seen": "2026-09-18T17:05:23.617786+00:00",
+    "status": "active"
+  },
+  {
+    "id": "c4921d96f43f4fc6bab7ee0e2bab4dc8",
+    "lat": 6.5173293125,
+    "lon": 79.9801889375,
+    "confidence": 82.875,
+    "severity": "low",
+    "report_count": 16,
+    "last_seen": "2026-09-18T17:05:15.417741+00:00",
+    "status": "active"
+  },
+  {
+    "id": "80a94028d2ea4d1390334e135db6effd",
+    "lat": 6.5172482,
+    "lon": 79.98019260000001,
+    "confidence": 82.4,
+    "severity": "low",
+    "report_count": 5,
+    "last_seen": "2026-09-18T17:05:15.217301+00:00",
+    "status": "active"
+  },
+  {
+    "id": "dc262637efbd4a6e9790020dec2daa66",
+    "lat": 6.51715175,
+    "lon": 79.98024275,
+    "confidence": 77.5,
+    "severity": "low",
+    "report_count": 4,
+    "last_seen": "2026-09-18T17:05:11.017508+00:00",
+    "status": "active"
+  },
+  {
+    "id": "79215343153f40f79fd2cac8c74f3abe",
+    "lat": 6.517525750000001,
+    "lon": 79.980089125,
+    "confidence": 82.125,
+    "severity": "low",
+    "report_count": 8,
+    "last_seen": "2026-09-18T17:05:22.217682+00:00",
+    "status": "active"
+  },
+  {
+    "id": "0c17e461e89544fbbe85d99de4cae6a6",
+    "lat": 6.517593,
+    "lon": 79.980055,
+    "confidence": 80.0,
+    "severity": "low",
+    "report_count": 2,
+    "last_seen": "2026-09-18T17:05:22.817534+00:00",
+    "status": "active"
+  },
+  {
+    "id": "2d54e4ac37de4a3597a5214645cb2d89",
+    "lat": 6.5177689999999995,
+    "lon": 79.9799946,
+    "confidence": 90.8,
+    "severity": "medium",
+    "report_count": 5,
+    "last_seen": "2026-09-18T17:05:27.418409+00:00",
+    "status": "active"
+  },
+  {
+    "id": "08153e7f01794164af58bac3dfaec4bd",
+    "lat": 6.517923666666666,
+    "lon": 79.97997866666667,
+    "confidence": 85.0,
+    "severity": "low",
+    "report_count": 3,
+    "last_seen": "2026-09-18T17:05:31.417920+00:00",
+    "status": "active"
+  },
+  {
+    "id": "d869b2fb60c040f891f60c48d62465e2",
+    "lat": 6.518194,
+    "lon": 79.9797865,
+    "confidence": 85.16666666666667,
+    "severity": "low",
+    "report_count": 6,
+    "last_seen": "2026-09-18T17:05:38.818222+00:00",
+    "status": "active"
+  },
+  {
+    "id": "4608c8ffea964c89a1ac51fa132d9261",
+    "lat": 6.5186098,
+    "lon": 79.9796018,
+    "confidence": 80.0,
+    "severity": "low",
+    "report_count": 5,
+    "last_seen": "2026-09-18T17:05:49.618399+00:00",
+    "status": "active"
+  },
+  {
+    "id": "340ac960c317465ca81001b4025e9fed",
+    "lat": 6.5188224,
+    "lon": 79.9795148,
+    "confidence": 80.8,
+    "severity": "low",
+    "report_count": 5,
+    "last_seen": "2026-09-18T17:05:55.218617+00:00",
+    "status": "active"
+  },
+  {
+    "id": "7ffb3cf818d74c3f8962371e633e83ad",
+    "lat": 6.518899,
+    "lon": 79.979484,
+    "confidence": 80.0,
+    "severity": "low",
+    "report_count": 1,
+    "last_seen": "2026-09-18T17:05:56.218908+00:00",
+    "status": "active"
+  },
+  {
+    "id": "f6d8d47c4ba74b45ac711ba2184aefd9",
+    "lat": 6.519194666666667,
+    "lon": 79.97936366666667,
+    "confidence": 81.22222222222223,
+    "severity": "low",
+    "report_count": 9,
+    "last_seen": "2026-09-18T17:06:04.218323+00:00",
+    "status": "active"
+  },
+  {
+    "id": "89d9d9002ff347f8bc1e61daaf908656",
+    "lat": 6.519305666666667,
+    "lon": 79.97932,
+    "confidence": 81.66666666666667,
+    "severity": "low",
+    "report_count": 6,
+    "last_seen": "2026-09-18T17:06:06.219068+00:00",
+    "status": "active"
+  },
+  {
+    "id": "023739eb8a124b5194d8d5f8edaf2e99",
+    "lat": 6.5196883,
+    "lon": 79.9791839,
+    "confidence": 82.8,
+    "severity": "low",
+    "report_count": 10,
+    "last_seen": "2026-09-18T17:06:14.819343+00:00",
+    "status": "active"
+  },
+  {
+    "id": "7e5f3e97ef54449ba527669502c286a4",
+    "lat": 6.5201519999999995,
+    "lon": 79.979015,
+    "confidence": 84.75,
+    "severity": "low",
+    "report_count": 4,
+    "last_seen": "2026-09-18T17:06:25.218828+00:00",
+    "status": "active"
+  },
+  {
+    "id": "b37d153f8f224c1eaf56ea3f32cce4db",
+    "lat": 6.520343142857143,
+    "lon": 79.9789957142857,
+    "confidence": 82.0,
+    "severity": "low",
+    "report_count": 7,
+    "last_seen": "2026-09-18T17:06:29.221056+00:00",
+    "status": "active"
+  },
+  {
+    "id": "f5f7a7f1ad764987bcd3c72a5f32c0c6",
+    "lat": 6.520530666666666,
+    "lon": 79.97902466666666,
+    "confidence": 81.66666666666667,
+    "severity": "low",
+    "report_count": 3,
+    "last_seen": "2026-09-18T17:06:32.418829+00:00",
+    "status": "active"
+  },
+  {
+    "id": "f806dfada1d44096bb180dca911f0657",
+    "lat": 6.521546,
+    "lon": 79.979625,
+    "confidence": 83.0,
+    "severity": "low",
+    "report_count": 1,
+    "last_seen": "2026-09-18T17:07:01.820070+00:00",
+    "status": "active"
+  },
+  {
+    "id": "3f4ae4cafcb3463daab01abdac805807",
+    "lat": 6.521772,
+    "lon": 79.979695,
+    "confidence": 81.0,
+    "severity": "low",
+    "report_count": 1,
+    "last_seen": "2026-09-18T17:07:07.218970+00:00",
+    "status": "active"
+  },
+  {
+    "id": "908ace8529e04d92ba5b6c846adf2250",
+    "lat": 6.5224649999999995,
+    "lon": 79.97988099999999,
+    "confidence": 88.16666666666667,
+    "severity": "medium",
+    "report_count": 6,
+    "last_seen": "2026-09-18T17:07:22.220430+00:00",
+    "status": "active"
+  },
+  {
+    "id": "4f1aa0eed9c245d48d0aa4049f64219b",
+    "lat": 6.522764,
+    "lon": 79.97991,
+    "confidence": 83.0,
+    "severity": "low",
+    "report_count": 2,
+    "last_seen": "2026-09-18T17:07:28.220345+00:00",
+    "status": "active"
+  },
+  {
+    "id": "598b5443c4a144bf81c62f4bc9ae3799",
+    "lat": 6.5229428,
+    "lon": 79.9798996,
+    "confidence": 80.8,
+    "severity": "low",
+    "report_count": 5,
+    "last_seen": "2026-09-18T17:07:32.219699+00:00",
+    "status": "active"
+  },
+  {
+    "id": "307635e8637d4f31a30579d204d5ba96",
+    "lat": 6.523086,
+    "lon": 79.979877,
+    "confidence": 81.0,
+    "severity": "low",
+    "report_count": 2,
+    "last_seen": "2026-09-18T17:07:35.220876+00:00",
+    "status": "active"
+  },
+  {
+    "id": "8a19fc5af2ba407e9c5ca2c090a67b4b",
+    "lat": 6.52321,
+    "lon": 79.97985766666666,
+    "confidence": 84.16666666666667,
+    "severity": "low",
+    "report_count": 6,
+    "last_seen": "2026-09-18T17:07:38.220571+00:00",
+    "status": "active"
+  },
+  {
+    "id": "9c9ed45e287d4febbc700597472d71e5",
+    "lat": 6.523387,
+    "lon": 79.97982,
+    "confidence": 80.5,
+    "severity": "low",
+    "report_count": 2,
+    "last_seen": "2026-09-18T17:07:41.620741+00:00",
+    "status": "active"
+  },
+  {
+    "id": "bca41cb7f4f9461a950d173a90f47f31",
+    "lat": 6.523541250000001,
+    "lon": 79.9797855,
+    "confidence": 89.75,
+    "severity": "medium",
+    "report_count": 4,
+    "last_seen": "2026-09-18T17:07:45.420658+00:00",
+    "status": "active"
+  },
+  {
+    "id": "2b1eb2c2083a480ca7c25a6d8543c347",
+    "lat": 6.523966,
+    "lon": 79.979705,
+    "confidence": 84.0,
+    "severity": "low",
+    "report_count": 4,
+    "last_seen": "2026-09-18T17:07:54.020339+00:00",
+    "status": "active"
+  },
+  {
+    "id": "9707cc8f391a40fead9544c733c2a6ed",
+    "lat": 6.524240333333331,
+    "lon": 79.97972275000001,
+    "confidence": 91.5,
+    "severity": "medium",
+    "report_count": 12,
+    "last_seen": "2026-09-18T17:08:19.421194+00:00",
+    "status": "active"
+  },
+  {
+    "id": "13369e6041194b0d8fdf5d3aa1538688",
+    "lat": 6.524275538461537,
+    "lon": 79.97985953846154,
+    "confidence": 85.61538461538461,
+    "severity": "medium",
+    "report_count": 13,
+    "last_seen": "2026-09-18T17:08:24.221034+00:00",
+    "status": "active"
+  },
+  {
+    "id": "1baa1a24109247cea2e2ca939f613318",
+    "lat": 6.524306428571429,
+    "lon": 79.98005871428573,
+    "confidence": 86.42857142857143,
+    "severity": "medium",
+    "report_count": 7,
+    "last_seen": "2026-09-18T17:08:28.024755+00:00",
+    "status": "active"
+  },
+  {
+    "id": "351bf382e95641a1a5b8c7a8d3a0c5d7",
+    "lat": 6.524327333333333,
+    "lon": 79.98018933333333,
+    "confidence": 81.66666666666667,
+    "severity": "low",
+    "report_count": 3,
+    "last_seen": "2026-09-18T17:08:30.420984+00:00",
+    "status": "active"
+  },
+  {
+    "id": "6785baec461c4bf4ac4d623628b5b7fb",
+    "lat": 6.524337,
+    "lon": 79.980274,
+    "confidence": 92.0,
+    "severity": "low",
+    "report_count": 2,
+    "last_seen": "2026-09-18T17:08:31.621028+00:00",
+    "status": "active"
+  },
+  {
+    "id": "b096ec769a7748a5a6605c7dbd18c1cd",
+    "lat": 6.524366333333335,
+    "lon": 79.98044255555554,
+    "confidence": 82.77777777777777,
+    "severity": "low",
+    "report_count": 9,
+    "last_seen": "2026-09-18T17:08:36.221214+00:00",
+    "status": "active"
+  },
+  {
+    "id": "df0aa575e2d3445ab53cfb6ff0727811",
+    "lat": 6.524390833333334,
+    "lon": 79.9805595,
+    "confidence": 85.5,
+    "severity": "low",
+    "report_count": 6,
+    "last_seen": "2026-09-18T17:08:39.221271+00:00",
+    "status": "active"
+  },
+  {
+    "id": "182dcf6e7dc346d88c290d972866940c",
+    "lat": 6.5244149999999985,
+    "lon": 79.98069557142858,
+    "confidence": 84.14285714285714,
+    "severity": "low",
+    "report_count": 7,
+    "last_seen": "2026-09-18T17:08:41.221492+00:00",
+    "status": "active"
+  },
+  {
+    "id": "11e648762c8245c2a3852fb1159c3866",
+    "lat": 6.524435500000002,
+    "lon": 79.9808285,
+    "confidence": 84.0,
+    "severity": "low",
+    "report_count": 8,
+    "last_seen": "2026-09-18T17:08:44.221206+00:00",
+    "status": "active"
+  },
+  {
+    "id": "60b50eb5f58e4f4e85f06ac6d78b8cde",
+    "lat": 6.524450666666667,
+    "lon": 79.98092633333333,
+    "confidence": 82.83333333333333,
+    "severity": "low",
+    "report_count": 6,
+    "last_seen": "2026-09-18T17:08:46.021611+00:00",
+    "status": "active"
+  },
+  {
+    "id": "75b7548d62784f949eb98762bebd0e81",
+    "lat": 6.524475166666666,
+    "lon": 79.98105758333334,
+    "confidence": 88.25,
+    "severity": "medium",
+    "report_count": 12,
+    "last_seen": "2026-09-18T17:08:49.222160+00:00",
+    "status": "active"
+  },
+  {
+    "id": "9395ecd301ef42f7b242fc6d607b2d0d",
+    "lat": 6.5245,
+    "lon": 79.981338,
+    "confidence": 78.0,
+    "severity": "low",
+    "report_count": 1,
+    "last_seen": "2026-09-18T17:08:53.421715+00:00",
+    "status": "active"
+  },
+  {
+    "id": "dfaf65b026844cef986ac91d7b2396f2",
+    "lat": 6.524361,
+    "lon": 79.98164,
+    "confidence": 78.0,
+    "severity": "low",
+    "report_count": 1,
+    "last_seen": "2026-09-18T17:08:59.822088+00:00",
+    "status": "active"
+  },
+  {
+    "id": "94fe0bd63aee43cc8bcff1a87fd47833",
+    "lat": 6.524294,
+    "lon": 79.98173333333334,
+    "confidence": 79.66666666666667,
+    "severity": "low",
+    "report_count": 3,
+    "last_seen": "2026-09-18T17:09:02.822003+00:00",
+    "status": "active"
+  },
+  {
+    "id": "243f2c9325884cd0bd7b322dab6a9e01",
+    "lat": 6.523764333333333,
+    "lon": 79.98192833333333,
+    "confidence": 82.0,
+    "severity": "low",
+    "report_count": 3,
+    "last_seen": "2026-09-18T17:09:13.822374+00:00",
+    "status": "active"
+  },
+  {
+    "id": "9a89cc941efb41319ca46db67d4ca04b",
+    "lat": 6.5236706,
+    "lon": 79.981956,
+    "confidence": 82.6,
+    "severity": "low",
+    "report_count": 5,
+    "last_seen": "2026-09-18T17:09:16.222694+00:00",
+    "status": "active"
+  },
+  {
+    "id": "904f74776abb4a5baf45ec250f394b88",
+    "lat": 6.523569500000001,
+    "lon": 79.981943,
+    "confidence": 80.5,
+    "severity": "low",
+    "report_count": 4,
+    "last_seen": "2026-09-18T17:09:17.621842+00:00",
+    "status": "active"
+  },
+  {
+    "id": "55fb0211090c4ed3a7faab0540571660",
+    "lat": 6.523464000000001,
+    "lon": 79.98189133333334,
+    "confidence": 82.66666666666667,
+    "severity": "low",
+    "report_count": 3,
+    "last_seen": "2026-09-18T17:09:19.821878+00:00",
+    "status": "active"
+  },
+  {
+    "id": "c113cd99814749459c098da5b4bc031e",
+    "lat": 6.52337,
+    "lon": 79.9818588,
+    "confidence": 87.0,
+    "severity": "low",
+    "report_count": 5,
+    "last_seen": "2026-09-18T17:09:21.821739+00:00",
+    "status": "active"
+  },
+  {
+    "id": "916c14aa085041ae833159ead9a51dde",
+    "lat": 6.523261000000001,
+    "lon": 79.98184050000002,
+    "confidence": 83.625,
+    "severity": "low",
+    "report_count": 8,
+    "last_seen": "2026-09-18T17:09:24.226583+00:00",
+    "status": "active"
+  },
+  {
+    "id": "ca3d8b9d7c1f423992a3a7b37d494b0b",
+    "lat": 6.523167599999999,
+    "lon": 79.981842,
+    "confidence": 81.2,
+    "severity": "low",
+    "report_count": 5,
+    "last_seen": "2026-09-18T17:09:26.021569+00:00",
+    "status": "active"
+  },
+  {
+    "id": "6ba18b06d22641938d799f1072954dcf",
+    "lat": 6.523092000000001,
+    "lon": 79.981836,
+    "confidence": 82.0,
+    "severity": "low",
+    "report_count": 3,
+    "last_seen": "2026-09-18T17:09:27.022823+00:00",
+    "status": "active"
+  },
+  {
+    "id": "75d6027150cd4cf691a2806ea00ad046",
+    "lat": 6.522989142857143,
+    "lon": 79.98173842857143,
+    "confidence": 90.78571428571429,
+    "severity": "high",
+    "report_count": 14,
+    "last_seen": "2026-09-18T17:09:31.222528+00:00",
+    "status": "active"
+  },
+  {
+    "id": "b92bd029ebc8474782906ca80b8b4980",
+    "lat": 6.5228666666666655,
+    "lon": 79.98171333333333,
+    "confidence": 87.41666666666667,
+    "severity": "medium",
+    "report_count": 12,
+    "last_seen": "2026-09-18T17:09:34.222994+00:00",
+    "status": "active"
+  },
+  {
+    "id": "6635a720d09447a091213dcf8bf1cbc8",
+    "lat": 6.522733999999998,
+    "lon": 79.98173600000001,
+    "confidence": 83.93333333333334,
+    "severity": "low",
+    "report_count": 15,
+    "last_seen": "2026-09-18T17:09:37.222865+00:00",
+    "status": "active"
+  },
+  {
+    "id": "ef050f804dcb434aabea67397235d5d1",
+    "lat": 6.522608249999999,
+    "lon": 79.98170325,
+    "confidence": 80.5,
+    "severity": "low",
+    "report_count": 4,
+    "last_seen": "2026-09-18T17:09:40.021943+00:00",
+    "status": "active"
+  },
+  {
+    "id": "c9466c8c70df47eebb27871bdaa77628",
+    "lat": 6.522536846153845,
+    "lon": 79.98158992307691,
+    "confidence": 92.53846153846153,
+    "severity": "medium",
+    "report_count": 13,
+    "last_seen": "2026-09-18T17:09:43.222809+00:00",
+    "status": "active"
+  },
+  {
+    "id": "e66817a1fa254009a6831d68fe827ae4",
+    "lat": 6.522434615384616,
+    "lon": 79.98154153846154,
+    "confidence": 92.61538461538461,
+    "severity": "medium",
+    "report_count": 13,
+    "last_seen": "2026-09-18T17:09:46.223246+00:00",
+    "status": "active"
+  },
+  {
+    "id": "a3a280b23e0b4ed7a1fd0a54a706f95c",
+    "lat": 6.522320285714286,
+    "lon": 79.98157914285714,
+    "confidence": 89.28571428571429,
+    "severity": "medium",
+    "report_count": 7,
+    "last_seen": "2026-09-18T17:09:48.222296+00:00",
+    "status": "active"
+  },
+  {
+    "id": "bee0cb0b38f54801bef0d924cc3297e8",
+    "lat": 6.522213333333336,
+    "lon": 79.98163566666669,
+    "confidence": 86.73333333333333,
+    "severity": "medium",
+    "report_count": 15,
+    "last_seen": "2026-09-18T17:09:51.222917+00:00",
+    "status": "active"
+  },
+  {
+    "id": "dd0b5d8da1044c5197cbb2f7f1cd4d14",
+    "lat": 6.522089333333334,
+    "lon": 79.9816885,
+    "confidence": 82.5,
+    "severity": "low",
+    "report_count": 6,
+    "last_seen": "2026-09-18T17:09:54.022371+00:00",
+    "status": "active"
+  },
+  {
+    "id": "40bfdc3581514cbe8885b4dc7251ab0a",
+    "lat": 6.52196411111111,
+    "lon": 79.98169933333335,
+    "confidence": 84.55555555555556,
+    "severity": "low",
+    "report_count": 9,
+    "last_seen": "2026-09-18T17:09:56.223342+00:00",
+    "status": "active"
+  },
+  {
+    "id": "7bc6eeed104f4d58bb7e7ada2f8d706c",
+    "lat": 6.521850666666669,
+    "lon": 79.98169866666666,
+    "confidence": 88.2,
+    "severity": "medium",
+    "report_count": 15,
+    "last_seen": "2026-09-18T17:09:59.222352+00:00",
+    "status": "active"
+  },
+  {
+    "id": "daeb43e30fc742f1bdc1511949bffc85",
+    "lat": 6.52177975,
+    "lon": 79.981752,
+    "confidence": 83.0,
+    "severity": "low",
+    "report_count": 4,
+    "last_seen": "2026-09-18T17:10:01.222350+00:00",
+    "status": "active"
+  },
+  {
+    "id": "b893eb5095ac4606955e2e54cd03bf56",
+    "lat": 6.5216395,
+    "lon": 79.98183108333335,
+    "confidence": 85.41666666666667,
+    "severity": "low",
+    "report_count": 12,
+    "last_seen": "2026-09-18T17:10:05.223408+00:00",
+    "status": "active"
+  },
+  {
+    "id": "cff80c6516c242aab999e9ca782762fb",
+    "lat": 6.52155357142857,
+    "lon": 79.98185900000001,
+    "confidence": 87.85714285714286,
+    "severity": "medium",
+    "report_count": 7,
+    "last_seen": "2026-09-18T17:10:06.623791+00:00",
+    "status": "active"
+  },
+  {
+    "id": "78ddc8ed4816434ca7e85bbd6351a7c9",
+    "lat": 6.521442,
+    "lon": 79.98190774999999,
+    "confidence": 84.83333333333333,
+    "severity": "low",
+    "report_count": 12,
+    "last_seen": "2026-09-18T17:10:10.023292+00:00",
+    "status": "active"
+  },
+  {
+    "id": "1f590377963c4c179dcd9d181a56beef",
+    "lat": 6.521308947368423,
+    "lon": 79.98198189473683,
+    "confidence": 85.15789473684211,
+    "severity": "medium",
+    "report_count": 19,
+    "last_seen": "2026-09-18T17:10:16.222914+00:00",
+    "status": "active"
+  },
+  {
+    "id": "9ef5932a296a405baf45f1bc6ae82d68",
+    "lat": 6.521225923076923,
+    "lon": 79.98206869230768,
+    "confidence": 83.15384615384613,
+    "severity": "low",
+    "report_count": 13,
+    "last_seen": "2026-09-18T17:10:19.226440+00:00",
+    "status": "active"
+  },
+  {
+    "id": "c6a6967e166843f18559f04198db4107",
+    "lat": 6.521139333333334,
+    "lon": 79.98213033333334,
+    "confidence": 85.11111111111111,
+    "severity": "low",
+    "report_count": 9,
+    "last_seen": "2026-09-18T17:10:22.022857+00:00",
+    "status": "active"
+  },
+  {
+    "id": "527f2b971826499f92c9d68c94a31b74",
+    "lat": 6.521009666666669,
+    "lon": 79.98215633333335,
+    "confidence": 86.2,
+    "severity": "low",
+    "report_count": 15,
+    "last_seen": "2026-09-18T17:10:25.223287+00:00",
+    "status": "active"
+  },
+  {
+    "id": "5f7c9e603afe4675944bd1f71bc94c40",
+    "lat": 6.520884333333331,
+    "lon": 79.982153,
+    "confidence": 89.0,
+    "severity": "high",
+    "report_count": 15,
+    "last_seen": "2026-09-18T17:10:28.223406+00:00",
+    "status": "active"
+  },
+  {
+    "id": "aeb671f5a97e4c7381ba13737fb2e3ea",
+    "lat": 6.520760999999997,
+    "lon": 79.982156,
+    "confidence": 87.2,
+    "severity": "low",
+    "report_count": 15,
+    "last_seen": "2026-09-18T17:10:31.223446+00:00",
+    "status": "active"
+  },
+  {
+    "id": "8df3b5f961a24119a3a983c8a1df564e",
+    "lat": 6.520647500000001,
+    "lon": 79.9821755,
+    "confidence": 89.2,
+    "severity": "medium",
+    "report_count": 10,
+    "last_seen": "2026-09-18T17:10:33.223155+00:00",
+    "status": "active"
+  },
+  {
+    "id": "8858537aac6f4c37be1e410342e6b91f",
+    "lat": 6.520558500000002,
+    "lon": 79.98221399999998,
+    "confidence": 85.4,
+    "severity": "low",
+    "report_count": 10,
+    "last_seen": "2026-09-18T17:10:35.232739+00:00",
+    "status": "active"
+  },
+  {
+    "id": "7428426467f84bfc86b1ba484b4c7bd7",
+    "lat": 6.520432,
+    "lon": 79.98224941666669,
+    "confidence": 85.0,
+    "severity": "low",
+    "report_count": 12,
+    "last_seen": "2026-09-18T17:10:38.223717+00:00",
+    "status": "active"
+  },
+  {
+    "id": "1ece1df5d5164a7da2fbfb41fd75ea4e",
+    "lat": 6.520329583333333,
+    "lon": 79.98229091666667,
+    "confidence": 89.41666666666667,
+    "severity": "medium",
+    "report_count": 12,
+    "last_seen": "2026-09-18T17:10:41.224025+00:00",
+    "status": "active"
+  },
+  {
+    "id": "f093ee34a8da4df3bf912fcf32df0ea2",
+    "lat": 6.520230235294116,
+    "lon": 79.98234570588235,
+    "confidence": 84.70588235294117,
+    "severity": "low",
+    "report_count": 17,
+    "last_seen": "2026-09-18T17:10:44.622911+00:00",
+    "status": "active"
   }
 ]
