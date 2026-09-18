@@ -58,3 +58,60 @@ test('real telemetry is exact, stationary between responses, and frozen on disco
   assert.equal(positions[1][0], 6.49545);
   assert.equal(elements.get('speed').textContent, '2.1');
 });
+
+test('pothole controls persist mutations, hide repaired markers, and reject stale lists', async () => {
+  const elements = new Map();
+  function element() {
+    return { textContent: '', style: {}, hidden: false, children: [],
+      lastElementChild: { textContent: '' }, classList: { toggle() {}, add() {} },
+      replaceChildren() { this.children = []; }, append(...items) { this.children.push(...items); },
+      setAttribute() {}, addEventListener() {} };
+  }
+  const document = { body: element(), createElement: element, getElementById(id) {
+    if (!elements.has(id)) elements.set(id, element()); return elements.get(id);
+  } };
+  let created = 0, removed = 0;
+  const map = { setView() { return this; }, on() {}, getZoom() { return 17; } };
+  const L = { map: () => map, control: { zoom: () => ({ addTo() {} }) },
+    tileLayer: () => ({ addTo() { return this; }, on() {} }), divIcon: x => x,
+    marker() { created++; return { addTo() { return this; }, bindPopup() { return this; },
+      setLatLng() {}, setIcon() {}, setPopupContent() {}, remove() { removed++; } }; } };
+  const context = vm.createContext({ document, window: { L }, L, console,
+    performance: { now: () => 0 }, AbortSignal, setInterval() {}, requestAnimationFrame() {},
+    fetch: () => new Promise(() => {}) });
+  vm.runInContext(fs.readFileSync(path.join(__dirname, '../static/app.js'), 'utf8'), context);
+  const record = { id: 'hazard-1', lat: 6.49, lon: 79.98, severity: 'medium',
+    confidence: 85, report_count: 2, last_seen: new Date().toISOString(), status: 'active' };
+  let records = [record];
+  const methods = [];
+  context.fetch = async (url, options = {}) => {
+    if (options.method) {
+      methods.push(options.method);
+      record.status = options.method === 'PATCH' ? 'repaired' : 'deleted';
+      record.repaired_at = new Date().toISOString();
+      return { ok: true };
+    }
+    return { ok: true, json: async () => structuredClone(records) };
+  };
+  await vm.runInContext('pollPotholes();', context);
+  await vm.runInContext('pollPotholes();', context);
+  assert.equal(created, 1); // a second poll must not add duplicate markers
+  assert.equal(elements.get('pothole-count').textContent, 1);
+  // Capture an active list before a repair, then deliver it after the repair.
+  const normalFetch = context.fetch;
+  let resolveOld;
+  context.fetch = () => new Promise(resolve => { resolveOld = resolve; });
+  const oldRequest = vm.runInContext('pollPotholes()', context);
+  context.fetch = normalFetch;
+  await vm.runInContext("managePothole('hazard-1', 'repaired', document.createElement('button'))", context);
+  resolveOld({ ok: true, json: async () => [{ ...record, status: 'active' }] });
+  await oldRequest;
+  assert.deepEqual(methods, ['PATCH']);
+  assert.equal(created, 1);
+  assert.equal(removed, 1);
+  assert.equal(elements.get('pothole-count').textContent, 0);
+  assert.equal(elements.get('repaired-count').textContent, 1);
+  await vm.runInContext("managePothole('hazard-1', 'deleted', document.createElement('button'))", context);
+  assert.deepEqual(methods, ['PATCH', 'DELETE']);
+  assert.equal(elements.get('repaired-count').textContent, 0);
+});

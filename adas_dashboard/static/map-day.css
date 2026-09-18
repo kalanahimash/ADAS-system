@@ -1,0 +1,87 @@
+/* Daytime navigation map inspired by the reference. Original OSM tiles;
+   no inverted colors, artificial routes, or changes to GPS filtering. */
+.map-panel, #map { background: #dce8df; }
+.leaflet-tile-pane { filter: saturate(1.15) contrast(1.02); }
+.map-shade { background: none; }
+
+.map-header {
+  top: 16px; left: 16px; right: 16px; align-items: flex-start;
+}
+.map-header > div {
+  padding: 11px 15px; border-radius: 7px;
+  background: #233032df; border: 1px solid #ffffff40;
+  box-shadow: 0 3px 12px #233b4226; backdrop-filter: blur(8px);
+}
+.map-header .eyebrow { color: #c7d6d0; font-size: 7px; }
+.map-header h1 { font-size: 16px; margin: 4px 0 0; letter-spacing: -.2px; }
+.map-live { background: #233032e6; border-color: #ffffff45; color: #edf6f2; }
+.map-summary {
+  top: 88px; left: 16px; padding: 10px 13px; gap: 10px;
+  background: #253133e6; border-color: #ffffff40; border-radius: 7px;
+  backdrop-filter: blur(8px);
+}
+.map-summary strong { font-size: 23px; }
+.map-summary .eyebrow, .saved-label { color: #bbccc4; }
+.gps-quality-panel {
+  top: 168px; left: 16px; background: #253133e8;
+  color: #deeee5; border-color: #ffffff40;
+}
+.repair-history {
+  top: 205px; right: 16px; background: #253133f2;
+  border-color: #ffffff55; box-shadow: 0 3px 12px #233b4226;
+}
+.repair-history summary { padding: 11px; font-size: 8px; }
+
+.leaflet-control-zoom {
+  margin: 77px 16px 0 0 !important; border: 1px solid #65787540 !important;
+  border-radius: 10px !important; overflow: hidden;
+  box-shadow: 0 3px 12px #233b4226 !important;
+}
+.leaflet-control-zoom a {
+  background: #fffffff2 !important; color: #29453c !important;
+  border-color: #65787526 !important; width: 38px !important;
+  height: 38px !important; line-height: 38px !important;
+}
+.leaflet-control-zoom a:hover { background: #eaf4ed !important; }
+.recenter {
+  bottom: 164px; right: 16px; padding: 9px 12px;
+  background: #fffffff2; color: #294d40; border-color: #65787540;
+  box-shadow: 0 3px 12px #233b4226;
+}
+.recenter:hover { background: #eaf4ed; }
+
+.map-bottom { left: 16px; right: 16px; bottom: 26px; }
+.legend {
+  width: fit-content; padding: 9px 12px; margin-bottom: 9px;
+  border-radius: 6px; background: #253133e8; text-shadow: none;
+  color: #e6eee9; gap: 16px;
+}
+.legend .eyebrow { color: #bbccc4; }
+.location-card {
+  padding: 13px 16px; gap: 12px; border-radius: 8px;
+  background: #253133ed; border-color: #ffffff40; backdrop-filter: blur(8px);
+}
+.coordinates { font-size: 14px; margin-top: 6px; }
+.map-footnote {
+  display: inline-block; margin-top: 7px; padding: 4px 7px;
+  color: #2d4840; background: #ffffffdf; border-radius: 4px;
+}
+.leaflet-control-attribution { background: #fffffff0 !important; color: #3b544d !important; }
+.leaflet-control-attribution a { color: #256850 !important; }
+
+.vehicle-marker {
+  background: none; border: none; border-radius: 0; box-shadow: none;
+  filter: drop-shadow(0 2px 3px #15534480);
+}
+.vehicle-marker svg { display: block; width: 100%; height: 100%; }
+.pothole-marker { border-color: #fff; box-shadow: 0 1px 5px #1b3a4a88; }
+.pothole-marker.high { box-shadow: 0 0 0 4px #ff74682b, 0 1px 5px #1b3a4a88; }
+
+@media (max-width: 1100px) {
+  .map-live { font-size: 7px; padding: 8px; }
+  .coordinates { font-size: 12px; }
+}
+@media (max-width: 720px) {
+  .legend { gap: 12px; }
+  .location-status { display: none; }
+}

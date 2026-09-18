@@ -7,6 +7,7 @@
   <title>STRADA · ADAS dashboard</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='map-day.css') }}">
   <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script defer src="{{ url_for('static', filename='app.js') }}"></script>
 </head>
@@ -33,7 +34,7 @@
   </section>
   <section class="map-panel" aria-label="Live road map">
     <div id="map"></div><div class="map-shade"></div>
-    <header class="map-header"><div><div class="eyebrow">LIVE ENVIRONMENT</div><h1>Your road, ahead.</h1></div><span class="map-live"><i></i> LIVE MAP</span></header>
+    <header class="map-header"><div><div class="eyebrow">ROAD INTELLIGENCE</div><h1>Live road map</h1></div><span class="map-live"><i></i> OPENSTREETMAP</span></header>
     <div id="map-error" class="map-error" role="status" hidden>Map unavailable. Internet is required for Leaflet and OpenStreetMap tiles.</div>
     <div class="map-summary"><div class="summary-icon">⌖</div><div><span class="eyebrow">MAPPED POTHOLES</span><strong id="pothole-count">0</strong></div><span class="saved-label">LOCAL<br>REPORTS</span></div>
     <details class="repair-history"><summary>REPAIRED HISTORY <span id="repaired-count">0</span></summary><div id="repaired-list">No repaired potholes yet.</div></details>

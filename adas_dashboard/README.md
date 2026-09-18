@@ -58,7 +58,9 @@ Send one UTF-8 JSON object per newline, e.g. twice a second:
 
 ## Persistence and severity
 
-Each detection is compared with all records using Haversine distance. The nearest record within 8 m gains one report, a report-weighted average position/confidence, and an updated UTC timestamp. Otherwise, a new UUID record is created. Repeated `POTHOLE` packets count as repeated reports; the firmware should emit an event once per impact if independent observations are required.
+Only valid-GPS detections with `vehicle_state == "MOVING"` and filtered speed **above** `MIN_POTHOLE_SPEED_KMH` create/update potholes. Stationary shaking, unconfirmed movement, invalid GPS, and held jumps cannot create a marker. Records use the filtered/display coordinates. Each eligible detection is compared with all records using Haversine distance. The nearest active record within 8 m gains one report, a report-weighted average position/confidence, and an updated UTC timestamp. Otherwise, a new UUID record is created. Repeated `POTHOLE` packets count as repeated reports; the firmware should emit an event once per impact if independent observations are required.
+
+Marker popups offer **Delete Pothole** and **Mark as Repaired**. Both persist to JSON before reporting success. Repaired/deleted records are excluded from the normal map, count, and proximity alerts. Repaired records and timestamps are visible in **REPAIRED HISTORY**. Deletions retain a hidden record (`status: "deleted"`) so repeated reports within 8 m do not immediately recreate a deleted marker. Repaired sites also suppress re-reports; neither action automatically reopens a site. Existing files without a status are treated as active. Failed management writes keep the original status and return HTTP 503.
 
 Illustrative severity thresholds: **low** vibration <0.30 g, **medium** 0.30–0.59 g, **high** ≥0.60 g. A record retains its highest observed severity. These are configurable prototype heuristics in `serial_reader.py`, not calibrated road safety ratings.
 
@@ -67,8 +69,11 @@ Writes use a temporary file and atomic replacement. Access is locked across the 
 ## HTTP API
 
 - `GET /` — dashboard.
-- `GET /api/status` — last telemetry, connection/fix status, timestamp, packet age, simulation flag, errors, invalid packet count, stored pothole count, and nearest confirmed pothole within 100 m (or `null`).
-- `GET /api/potholes` — JSON array of `id`, `lat`, `lon`, `severity`, `report_count`, average `confidence`, and `last_seen` (UTC ISO 8601).
+- `GET /api/status` — raw and filtered telemetry, vehicle state, GPS quality/filter reason, connection status, receipt timestamp, errors, active pothole count, `pothole_recorded`, and nearest active confirmed pothole within 100 m (or `null`).
+- `GET /api/potholes` — active records: `id`, `lat`, `lon`, `status`, `severity`, `report_count`, average `confidence`, and `last_seen` (UTC ISO 8601).
+- `GET /api/potholes?include_history=1` — all active/repaired/deleted records, including repair/deletion timestamps.
+- `DELETE /api/potholes/<id>` — persistent deletion.
+- `PATCH /api/potholes/<id>` with JSON `{"status":"repaired"}` — mark repaired and preserve history.
 
 Start with `python app.py`, which binds HTTP port 5000 before starting the background reader exactly once. A second launch fails to bind HTTP before it can open another serial reader. Concurrent calls to start the same monitor are locked. Windows opens COM4 exclusively. Importing `app` for tests does not open a serial port. No Flask reloader is used. Startup logs show the source, port, baud, and exact app path; terminal logs report each valid ESP32 packet, connection transitions, and reconnect errors.
 
@@ -85,9 +90,40 @@ Tests use temporary JSON files and do not modify your map data. Hardware integra
 
 1. Stop the old Flask process with Ctrl+C. Close `serial_test.py` and Arduino Serial Monitor.
 2. Run `python app.py` from this directory. Confirm the startup log says `source=ESP32`, `port=COM4`, `baud=115200`.
-3. Open http://127.0.0.1:5000/api/status. With valid COM4 packets, expect `source: "ESP32"`, `simulation: false`, `connected: true`, the real sensor fields, and a changing `updated_at` receipt timestamp.
+3. Open http://127.0.0.1:5000/api/status. With valid COM4 packets, expect `source: "ESP32"`, `simulation: false`, `connected: true`, the real sensor fields, and a changing `updated_at` receipt timestamp. `raw_lat/raw_lon/raw_speed` match incoming GPS; `lat/lon/speed` are filtered for display.
 4. Refresh the dashboard (Ctrl+F5). Its badges must show `DATA SOURCE: ESP32` and `ESP32: CONNECTED`.
 5. Unplug ESP32. Within about two seconds the API becomes disconnected, speed/vibration reset to zero, and coordinates stop changing. Refresh the API page manually to view the new JSON; the dashboard polls automatically.
 6. Plug it back in. Open failures retry every two seconds. After the board boots and sends a valid packet, connected status and real values resume automatically.
 
 If you ever see `source: "SIMULATION"` after setting `False`, an older process is still serving port 5000: stop that process and restart this app. No browser cache can change the running Python process's configuration.
+
+## GPS drift filtering
+
+All thresholds are near the top of **`gps_filter.py`**. Restart Flask after changing them:
+
+| Setting | Default | Meaning |
+| --- | --- | --- |
+| `GPS_STATIONARY_SPEED_KMH` | 2.0 | Lower raw speeds display as 0.0 km/h. |
+| `GPS_DRIFT_RADIUS_METERS` | 5.0 | Low-speed changes inside this radius leave the stable display position unchanged. |
+| `GPS_MOVEMENT_CONFIRM_SAMPLES` | 3 | Consecutive coherent valid packets needed to enter MOVING; use 1 for immediate confirmation. |
+| `GPS_STATIONARY_CONFIRM_SAMPLES` | 3 | Consecutive stationary packets needed to leave MOVING. Speed and position freeze immediately while confirmation is pending. |
+| `MIN_POTHOLE_SPEED_KMH` | 5.0 | Filtered speed must be strictly above this value to record a pothole. |
+| `GPS_MAX_JUMP_METERS` | 30.0 | Minimum threshold for a suspicious jump, extended by a speed/time travel allowance. |
+| `GPS_JUMP_CONFIRM_SAMPLES` | 5 | Consistent samples near a new location required before accepting a large jump. |
+
+The first valid fix anchors the map. Haversine distance compares subsequent raw coordinates against that stable anchor. Below 2 km/h and within 5 m, the anchor stays fixed and speed displays 0.0. Speed at/above 2 km/h or coherent displacement at/above 5 m counts as movement evidence. Three consecutive movement packets release the position hold. Slow confirmed displacement can update the anchor while speed still displays zero; it never meets the pothole speed gate. Once moving, ordinary coordinates update directly without frontend-generated movement.
+
+Large jumps are held until five consistent samples support the new location; scattered outliers reset confirmation. A generous speed/time allowance lets ordinary driving continue. Loss of GPS fix or serial connection resets movement confirmation while retaining the last stable display location. These are heuristics: persistent GPS errors can eventually be accepted as relocation, and stationary noise above the speed threshold can still fool the filter. Satellite count is only one quality indicator; this is not a substitute for accuracy/HDOP measurements or sensor fusion.
+
+The API preserves `raw_lat`, `raw_lon`, and `raw_speed` for debugging. `display_lat/display_lon` equal filtered `lat/lon`. Only filtered values drive the map, displayed speed, proximity calculations, and pothole creation. Browser console output shows **Raw GPS** and **Filtered GPS**, including `vehicle_state` and the filter decision. GPS quality is **POOR** for 0–3 satellites, **FAIR** for 4–5, and **GOOD** for 6+. Poor quality, invalid fixes, or held jumps show **GPS SIGNAL WEAK**; low satellite count alone does not reject otherwise valid fixes.
+
+## Stationary and driving checks
+
+1. Keep GPS in one location for several minutes: raw readings may wander, but small low-speed drift must leave the map fixed at 0.0 km/h.
+2. Repeat under a roof: inspect POOR/FAIR quality and weak-signal warnings. A single large outlier must not move the map.
+3. Move outdoors: after three coherent movement packets, normal updates should resume.
+4. Shake only the IMU while stationary: raw `road` may say POTHOLE, but `pothole_recorded` must remain false and no marker should appear.
+5. During actual movement above 5 km/h, a valid impact should create a pothole at the filtered location.
+6. Repair/delete a marker, restart Flask, and confirm it remains absent from the normal map. Repaired history should remain available.
+
+Automated tests cover a five-minute stationary sequence, movement/stop confirmation, poor-signal outliers, reconnect confirmation, minimum detection speed, management persistence, write failures, and stale frontend responses. Outdoor/under-roof field tuning still requires your GPS hardware.

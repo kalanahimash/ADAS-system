@@ -44,7 +44,9 @@ function setPosition(lat, lon) {
   if (!vehicleMarker) {
     currentPosition = destination;
     vehicleMarker = L.marker(destination, {
-      icon: L.divIcon({ className: 'vehicle-marker', html: '↑', iconSize: [34, 34], iconAnchor: [17, 17] }),
+      icon: L.divIcon({ className: 'vehicle-marker',
+        html: '<svg viewBox="0 0 48 56" aria-hidden="true"><path d="M24 4 44 48 24 39 4 48Z" fill="#16b99a" stroke="white" stroke-width="3" stroke-linejoin="round"/><path d="M24 11V36L9 43Z" fill="#78e0c0"/></svg>',
+        iconSize: [42, 49], iconAnchor: [21, 25] }),
       zIndexOffset: 1000, title: 'Current vehicle location'
     }).addTo(map);
     if (following) map.setView(destination, map.getZoom(), { animate: false });
